@@ -1,0 +1,135 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: "Kanit", serif;
+    font-weight: 200;
+    font-style: normal;
+    background:#fce2e1 ;
+  }
+  
+  header {
+    background: #008220;
+    color: #f87b0d;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  #logoInHome {
+    width: 200px;
+    height: 20  0px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: #f87b0d; 
+    text-decoration: none;
+    font-weight: 400;
+  }
+
+  nav ul li a:hover {
+    color: #fce2e1; 
+    text-decoration: none;
+    font-weight: 400;
+    transition: ease-in-out 0.5s ;
+  }
+  
+  .hero {
+    background: #fce2e1;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .btn {
+    background: #008220;
+    color: #f87b0d;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 400;
+  }
+  .btn:hover{
+    background: #f87b0d;
+    color: #008220 ;
+    transition: ease-in-out 0.5s ;
+  }
+  
+  .products-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+  
+  .product-card {
+    border: 1px solid #fce2e1;
+    border-radius: 5px;
+    margin: 1rem;
+    padding: 1rem;
+    width: 200px;
+    text-align: center;
+  }
+  
+  .product-card img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  footer {
+    background: #008220;
+    color: #f87b0d;
+    font-weight: 300;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+/* Responsive Design */
+@media (max-width: 90%) {
+    nav ul li {
+      display: block;
+      margin: 10px 0;
+      
+    }
+    #Heading {
+      font-size: 20px;
+    }
+  
+    .product-card {
+      width: 90%;
+    }
+  }
+  
+  /* Mobile-Friendly Menu */
+  .menu-icon {
+    display:none;
+    font-size: 24px;
+    cursor: pointer;
+    
+  }
+  
+  @media (max-width: 500px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    nav ul {
+      display: block;
+      width: 100%;
+      overflow: hidden
+    }
+  
+    nav ul.active {
+      display: block;
+    }
+  }
