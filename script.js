@@ -10,8 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${product.name}</h3>
         <p class="price">$${product.price}</p>
         <p>${product.description}</p>
-        <a href="${product.amazonUrl}" target="_blank" class="btn">Buy Now</a>
-      `;
+        <a href="${product.amazonUrl}" target="_blank" class="btn">Buy Now</a>`;
   
       productsContainer.appendChild(productCard);
     });
