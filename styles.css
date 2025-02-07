@@ -3,18 +3,20 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    font-family: "Kanit", serif;
+    font-family: "Kanit",sans-serif;
     font-weight: 200;
     font-style: normal;
     background:#fce2e1 ;
   }
-  
+
+
   header {
     background: #008220;
     color: #f87b0d;
     padding: 1rem 0;
     text-align: center;
   }
+
 
   #logoInHome {
     width: 200px;
@@ -48,8 +50,20 @@ body {
     background: #fce2e1;
     padding: 2rem;
     text-align: center;
+    
   }
-  
+
+  .hero h2 {
+    font-weight: 200;
+    font-size: 20px;  
+  }
+
+  #nameSpan {
+    font-weight: 1000;
+    font-style: bold;
+    color: #008220;
+  }
+
   .btn {
     background: #008220;
     color: #f87b0d;
@@ -70,9 +84,15 @@ body {
     justify-content: space-around;
     padding: 1rem;
   }
+
+  .product-card .price{
+    color: #008220;
+    font-weight: 500;
+    font-size: 27px;
+  }
   
   .product-card {
-    border: 1px solid #fce2e1;
+    border: 1px solid #f87b0d;
     border-radius: 5px;
     margin: 1rem;
     padding: 1rem;
@@ -82,9 +102,10 @@ body {
   
   .product-card img {
     max-width: 100%;
-    height: auto;
+    height:auto;
+    border-radius: 10 px;
   }
-  
+  /* Footer */
   footer {
     background: #008220;
     color: #f87b0d;
@@ -92,7 +113,25 @@ body {
     text-align: center;
     padding: 2rem;
     margin-top: 2rem;
+    height: 5rem;
   }
+
+/* Contact.html page*/
+
+.contact-form {
+  padding: 50px 20px;
+}
+
+.contact-form h2{
+  color: #f87b0d;
+}
+
+.contact-form form label{
+  color: #f87b0d;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 
 /* Responsive Design */
 @media (max-width: 90%) {
@@ -131,5 +170,10 @@ body {
   
     nav ul.active {
       display: block;
+    }
+
+    #logoInHome {
+      width: 80px;
+      height: 15px  0px;
     }
   }
