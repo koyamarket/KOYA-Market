@@ -18,7 +18,7 @@ const products = [
     {
         id: 3,
         name: "CMF BY NOTHING Phone 1 5G",
-        price: "14,199/-",
+        price: "13,909/-",
         image: "assets/Products/Nothing phone 1.jpg",
         description: "5G (128 GB) (6 GB RAM) (Black) Free delevery, EMI Starts at ₹688. No Cost EMI available",
         amazonUrl: "https://amzn.to/3CGnJBN" // Add Amazon link here
