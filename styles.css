@@ -118,7 +118,6 @@ body {
 
 /* Contact.html page*/
 
-
 .container {
   color: #f87b0d;
   width: 50%;
@@ -181,20 +180,6 @@ button:hover {
 .contact-info i {
   margin-right: 10px;
   color: #007BFF;
-}
-
-.contact-form {
-  padding: 50px 20px;
-}
-
-.contact-form h2{
-  color: #f87b0d;
-}
-
-.contact-form form label{
-  color: #f87b0d;
-  font-weight: bold;
-  font-size: 14px;
 }
 
 .contact-form {
