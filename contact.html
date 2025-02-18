@@ -6,7 +6,7 @@
   <meta name="google-adsense-account" content="ca-pub-7248909901059325">
   <title>Contact - KOYA Market</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="KOYA Market_Logo.jpg">
+  <link rel="icon" type="image/png" href="/assets/fevicon.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,37 +27,99 @@
 </head>
 <body>
   <header>
-    <h1>My Ecommerce Store</h1>
+    <h1>Contact Us</h1>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About</a></li>
-        
       </ul>
     </nav>
   </header>
-
-  <main>
-    <section class="contact-form">
-      <h2>Talk To The Admin</h2>
-      <form>
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
+  
+  <div class="container">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+        </div>
         <button type="submit">Send Message</button>
-      </form>
-    </section>
-  </main>
-
+    </form>
+    
+    <div class="contact-info">
+        <a href="tel:+919876543210"><p><i class="fa fa-phone"></i> +91 98765 43210</p></a>
+        <a href="mailto:republicofkoya@gmail.com?subject=Customer%20Support%20-%20Koya%20Market&body=Support%20for%20:%20"><p><i class="fa fa-envelope"></i> support@koyamarket.inc</p></a>
+        <p><i class="fa fa-map-marker-alt"></i> Malappuram, Kerala, India</p>
+    </div>
+  </div>
+  
   <footer>
-    <p>&copy; 2023 My Ecommerce Store</p>
+    <p>&copy; 2023 KOYA Market</p>
   </footer>
+
+  <!-- Firebase SDK Script -->
+  <script type="module">
+    // Import necessary Firebase SDKs
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
+    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
+
+    // Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
+      authDomain: "users-messages-koyamarket.firebaseapp.com",
+      databaseURL: "https://users-messages-koyamarket-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "users-messages-koyamarket",
+      storageBucket: "users-messages-koyamarket.firebasestorage.app",
+      messagingSenderId: "524030311376",
+      appId: "1:524030311376:web:3d6883aec69b3d7b7397d5",
+      measurementId: "G-C18XSFX2VC"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+
+    // Initialize Firestore
+    const db = getFirestore(app);
+
+    // Function to add message to Firestore
+    const addMessage = async (name, email, message) => {
+      try {
+        const docRef = await addDoc(collection(db, "messages"), {
+          name,
+          email,
+          message,
+          timestamp: new Date()
+        });
+        console.log("Message successfully added with ID: ", docRef.id);
+      } catch (e) {
+        console.error("Error adding message: ", e);
+      }
+    };
+
+    // Form submission handler
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Call Firebase function to save data
+      addMessage(name, email, message);
+
+      // Optionally, reset the form after submission or show a success message
+      alert("Message sent successfully!");
+      e.target.reset();
+    });
+  </script>
 </body>
 </html>
