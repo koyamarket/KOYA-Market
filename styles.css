@@ -40,7 +40,7 @@ body {
   }
 
   nav ul li a:hover {
-    color: #fce2e1; 
+    color: #fff; 
     text-decoration: none;
     font-weight: 400;
     transition: ease-in-out 0.5s ;
@@ -66,7 +66,7 @@ body {
 
   .btn {
     background: #008220;
-    color: #f87b0d;
+    color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
     border-radius: 5px;
@@ -74,7 +74,7 @@ body {
   }
   .btn:hover{
     background: #f87b0d;
-    color: #008220 ;
+    color: #fff;
     transition: ease-in-out 0.5s ;
   }
   
@@ -114,6 +114,10 @@ body {
     padding: 2rem;
     margin-top: 2rem;
     height: 5rem;
+    a {
+      text-decoration: none;
+      color: #007BFF;
+    }
   }
 
 /* Contact.html page*/
@@ -150,7 +154,7 @@ input, textarea {
 button {
   width: 100%;
   background: #008220;
-  color: #f87b0d;
+  color: #fff;
   padding: 10px;
   border: none;
   border-radius: 5px;
@@ -162,7 +166,8 @@ button {
 }
 button:hover {
   background: #f87b0d;
-  color: #008220;
+  color: #fff;
+  transition: ease-in-out 0.5s ;
 }
 .contact-info {
   margin-top: 20px;
@@ -194,6 +199,111 @@ button:hover {
   color: #f87b0d;
   font-weight: bold;
   font-size: 14px;
+}
+
+/* About Us Page Styles */
+.about-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 50px;
+  background: #fff;
+}
+
+.about-image {
+  width: 45%;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.about-content {
+  width: 50%;
+}
+
+.about-content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #008220;
+}
+
+.about-content p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #333;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.about-values {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+.values{
+  margin-bottom: 30px;
+}
+
+.value-box {
+  background: #fce2e1;
+  padding: 15px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #f87b0d;
+  margin: 15px 0;
+}
+
+.value-box img {
+  width: 40px;
+  height: 40px;
+}
+
+.value-box h3 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #008220;
+}
+
+.cta-button {
+  margin-left: 300px;
+  background:#008220;
+  color: #fff;
+  padding: 12px 44px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.cta-button:hover {
+  background: #f87b0d;
+  color: #fff;
+  transition: ease-in-out 0.5s ;
+}
+
+/* Privacy Policy */
+.main_privacyPolicy{
+  width: 80%;
+  margin: 20px auto;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.main_privacyPolicy h2 {
+  color: #f87b0d;
+}
+
+.main_privacyPolicy section {
+  margin-bottom: 20px;
 }
 
 
@@ -240,4 +350,8 @@ button:hover {
       width: 80px;
       height: 15px  0px;
     }
+    .cta-button {
+      margin: 0 auto;
+      padding: 10px 44px;
+  }
   }
