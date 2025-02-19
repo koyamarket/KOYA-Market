@@ -358,4 +358,10 @@ button:hover {
       margin: 0 auto;
       padding: 10px 44px;
   }
+    footer a{
+        text-decoration:none ;
+        margin: 2px;
+        padding: 1.5px 1.5px 1.5px 1.5px;
+        font-size: 10px;
+    }
   }
