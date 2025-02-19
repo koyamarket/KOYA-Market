@@ -116,7 +116,11 @@ body {
     height: 5rem;
     a {
       text-decoration: none;
-      color: #007BFF;
+      color: #f87b0d;
+      margin: 5px;
+      padding: 2px 15px;
+      border: 1px solid #f87b0d;
+      border-radius: 5px;
     }
   }
 
@@ -288,7 +292,7 @@ button:hover {
   transition: ease-in-out 0.5s ;
 }
 
-/* Privacy Policy */
+/* Privacy Policy and terms & conditions*/
 .main_privacyPolicy{
   width: 80%;
   margin: 20px auto;
