@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
       productCard.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
         <h3>${product.name}</h3>
-        <p class="price">$${product.price}</p>
+        <p class="price">₹${product.price}</p>
         <p>${product.description}</p>
         <a href="${product.amazonUrl}" target="_blank" class="btn">Buy Now</a>`;
   
