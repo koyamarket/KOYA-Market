@@ -9,6 +9,31 @@
   <script src="products.js" defer></script>
   <script src="script.js" defer></script>
   <link rel="icon" type="image/png" href="/assets/fevicon.png">
+
+  <!-- Firebase App (required for all Firebase services) -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
+
+<!-- Firebase Firestore -->
+<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
+
+<!-- Firebase Initialization (in a module format) -->
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
+  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
+    authDomain: "users-messages-koyamarket.firebaseapp.com",
+    projectId: "users-messages-koyamarket",
+    storageBucket: "users-messages-koyamarket.appspot.com",
+    messagingSenderId: "524030311376",
+    appId: "1:524030311376:web:3d6883aec69b3d7b7397d5"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
+</script>
+
   
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
