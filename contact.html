@@ -23,32 +23,6 @@
   gtag('config', 'G-3R9T7EQ206');
 </script>
 
-  <!-- Firebase App (required for all Firebase services) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-
-<!-- Firebase Firestore -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-
-<!-- Firebase Initialization (in a module format) -->
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-app.js";
-  import { getFirestore } from "https://www.gstatic.com/firebasejs/9.x.x/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
-    authDomain: "users-messages-koyamarket.firebaseapp.com",
-    projectId: "users-messages-koyamarket",
-    storageBucket: "users-messages-koyamarket.appspot.com",
-    messagingSenderId: "524030311376",
-    appId: "1:524030311376:web:3d6883aec69b3d7b7397d5"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-</script>
-
-
-  
 </head>
 <body>
   <header>
@@ -71,7 +45,7 @@
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" required>
+            <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
         </div>
         <div class="form-group">
             <label for="message">Message</label>
@@ -92,71 +66,6 @@
     <a href="/privacyPolicy.html">Privacy Policy</a>
     <a href="/termsConditions.html">Terms & Conditions</a>
   </footer>
-
-  <!-- Firebase SDK Script -->
-  <script type="module">
-    // Import necessary Firebase SDKs
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-    import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-firestore.js";
-
-    // Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
-      authDomain: "users-messages-koyamarket.firebaseapp.com",
-      databaseURL: "https://users-messages-koyamarket-default-rtdb.asia-southeast1.firebasedatabase.app",
-      projectId: "users-messages-koyamarket",
-      storageBucket: "users-messages-koyamarket.firebasestorage.app",
-      messagingSenderId: "524030311376",
-      appId: "1:524030311376:web:3d6883aec69b3d7b7397d5",
-      measurementId: "G-C18XSFX2VC"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-
-    // Initialize Firestore
-    const db = getFirestore(app);
-
-    // Function to add message to Firestore
-    const addMessage = async (name, email, message) => {
-      try {
-        const docRef = await addDoc(collection(db, "messages"), {
-          name,
-          email,
-          message,
-          timestamp: new Date()
-        });
-        console.log("Message successfully added with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding message: ", e);
-      }
-    };
-
-    // Form submission handler
-    document.getElementById('contact-form').addEventListener('submit', (e) => {
-      e.preventDefault();
-
-      const name = document.getElementById('name').value;
-      const email = document.getElementById('email').value;
-      const message = document.getElementById('message').value;
-
-      // Call Firebase function to save data
-      addMessage(name, email, message);
-
-      // Optionally, reset the form after submission or show a success message
-      alert("Message sent successfully!");
-      e.target.reset();
-    });
-  </script>
 </body>
     <script src="script.js"></script>
-  <!-- Firebase App (required for all Firebase services) -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"></script>
-
-<!-- Firebase Firestore -->
-<script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"></script>
-
-<!-- Your script file (make sure it's AFTER Firebase SDK) -->
-<script src="script.js"></script>
-
 </html> 
