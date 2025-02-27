@@ -4,24 +4,21 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-7248909901059325">
-  <title>Contact - KOYA Market</title>
+  <title>Contact Us - KOYA Market</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="/assets/fevicon.png">
+  <link rel="icon" type="image/png" href="/assets/Fevicon.png">
+  
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    
-  <!--     Google TAGS -->
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-3R9T7EQ206"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-3R9T7EQ206');
-</script>
+  <!-- Firebase SDK (Latest Version) -->
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+
+  <!-- Load Your Custom JavaScript -->
+  <script src="database.js" defer></script>
 
 </head>
 <body>
@@ -30,42 +27,43 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li> 
         <li><a href="products.html">Products</a></li>
-        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
   
-  <div class="container">
-    <h2>Contact Us</h2>
-    <form id="contact-form">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" placeholder="Enter your name" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
-        </div>
-        <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
-        </div>
-        <button type="submit">Send Message</button>
-    </form>
-    
-    <div class="contact-info">
-        <a href="tel:+919876543210"><p><i class="fa fa-phone"></i> +91 98765 43210</p></a>
-        <a href="mailto:republicofkoya@gmail.com?subject=Customer%20Support%20-%20Koya%20Market&body=Support%20for%20:%20"><p><i class="fa fa-envelope"></i> support@koyamarket.inc</p></a>
-        <p><i class="fa fa-map-marker-alt"></i> Malappuram, Kerala, India</p>
+  <main class="contact">
+    <div class="container">
+      <h2>Customer Support</h2>
+      <form id="contact-form">
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Enter your name" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter your email" autocomplete="email" required>
+          </div>
+          <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" rows="5" placeholder="Enter your message" required></textarea>
+          </div>
+          <button type="submit">Send Message</button>
+      </form>
+      
+      <div class="contact-info">
+          <a href="tel:+919876543210"><p><i class="fa fa-phone"></i> +91 98765 43210</p></a>
+          <a href="mailto:republicofkoya@gmail.com?subject=Customer%20Support%20-%20Koya%20Market&body=Support%20for%20:%20"><p><i class="fa fa-envelope"></i> support@koyamarket.inc</p></a>
+          <p><i class="fa fa-map-marker-alt"></i> Malappuram, Kerala, India</p>
+      </div>
     </div>
-  </div>
+  </main>
   
   <footer>
-    <p>&copy; 2023 KOYA Market ltd. All rights reserved.</p>
+    <p>&copy; 2023 KOYA Market</p>
     <a href="/privacyPolicy.html">Privacy Policy</a>
     <a href="/termsConditions.html">Terms & Conditions</a>
   </footer>
 </body>
-    <script src="script.js"></script>
 </html> 
