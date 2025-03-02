@@ -1,4 +1,4 @@
-// Firebase config
+// Your Firebase config
 const firebaseConfig = {
     apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
     authDomain: "users-messages-koyamarket.firebaseapp.com",
