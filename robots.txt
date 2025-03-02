@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://webkoya.sbs/sitemap.xml
+Sitemap: https://koyamarket.in/sitemap.xml
