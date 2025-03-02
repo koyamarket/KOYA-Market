@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-adsense-account" content="ca-pub-7248909901059325">
+  <title>Market Place - KOYA Market</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="products.js" defer></script>
+  <script src="script.js" defer></script>
+  <link rel="icon" type="image/png" href="/assets/Fevicon - Koya Market.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Kanit', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    header {
+      background: #222;
+      color: white;
+      padding: 15px;
+      text-align: center;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      text-align: center;
+    }
+    nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+    }
+    .market-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 100px;
+    }
+    .category-card {
+      width: 180px;
+      height: 180px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      padding: 15px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out;
+    }
+    .category-card:hover {
+      transform: scale(1.05);
+    }
+    .category-card img {
+      width: 185px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+    .category-card span {
+    margin-top: 10px;
+    font-weight: 400;
+    }
+    .category-card:hover {
+    transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Market Place</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li> 
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="products_main">
+    <div class="market-container">
+      <div class="category-card" onclick="location.href='health.html'">
+          <img src="/assets/Health & Ayurvedics - Koya Market.webp" alt="Health & Ayurvedics">
+          <span>Health & Ayurvedics</span>
+      </div>
+      <div class="category-card" onclick="location.href='realestate.html'">
+          <img src="/assets/Real Estates - Koya Market.webp" alt="Real Estate">
+          <span>Real Estate</span>
+      </div>
+      <!-- <div class="category-card" onclick="location.href='affiliate.html'">
+          <img src="images/affiliate.jpg" alt="Affiliate">
+          <span>Affiliate</span>
+      </div> -->
+      <!-- <div class="category-card" onclick="location.href='electronics.html'">
+          <img src="images/electronics.jpg" alt="Electronics">
+          <span>Electronics</span>
+      </div>
+      <div class="category-card" onclick="location.href='home-appliances.html'">
+          <img src="images/home-appliances.jpg" alt="Home Appliances">
+          <span>Home Appliances</span>
+      </div>
+      <div class="category-card" onclick="location.href='automobiles.html'">
+          <img src="images/automobiles.jpg" alt="Automobiles">
+          <span>Automobiles</span>
+      </div> -->
+    </div>
+  </main>
+
+  <footer>
+      <p>&copy; 2024 Koya Market Ltd.&trade; All rights reserved.</p>
+      <a href="/privacyPolicy.html">Privacy Policy</a>
+      <a href="/termsConditions.html">Terms & Conditions</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/koyamarket.inc?igsh=MWJjZWpkeXZxdHhtaA==" target="_blank" class="fa-brands fa-instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=61573447214593&mibextid=ZbWKwL" target="_blank" class="fa-brands fa-facebook"></a>
+      <a href="https://youtube.com/@koyacorporations?si=mXn6XuGtgQC9XuVX" target="_blank" class="fa-brands fa-youtube"></a>
+    </div>
+  </footer>
+</body>
+</html>
