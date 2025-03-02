@@ -2,53 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://*.instagram.com;">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="google-adsense-account" content="ca-pub-7248909901059325">
-  <title>Buy, Sell, and Rent Properties - Koya Market</title>
-  <meta name="description" content="Discover the best property deals with Koya Market. Buy, sell, or rent homes effortlessly." />
-  <meta name="description" content="koya market" />
-  
+  <title>Home - KOYA Market&trade;</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" type="image/png" href="/assets/fevicon.png">
+  <link rel="icon" type="image/png" href="/assets/Fevicon - Koya Market.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-  
-  <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-3R9T7EQ206"></script>
+<!-- FireBase Setup -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database.js"></script>
   <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-3R9T7EQ206');
+    const firebaseConfig = {
+      apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
+      authDomain: "users-messages-koyamarket.firebaseapp.com",
+      databaseURL: "https://users-messages-koyamarket-default-rtdb.asia-southeast1.firebasedatabase.app",
+      projectId: "users-messages-koyamarket",
+      storageBucket: "users-messages-koyamarket.firebasestorage.app",
+      messagingSenderId: "524030311376",
+      appId: "1:524030311376:web:3d6883aec69b3d7b7397d5"
+    };
+    firebase.initializeApp(firebaseConfig);
   </script>
+
 
 </head>
 <body>
   <header>
-    <img src="KOYA Market_Logo.jpg" alt="KOYA Market" id="logoInHome">
+     <h1>Koya Market Ltd.&trade;</h1>
     <nav>
       <ul>
-        <li><a href="products.html">Products</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="contact.html">Contact</a></li>
+        <li><a href="market.html">market</a></li>
       </ul>
     </nav>
   </header>
-
-  <main>
-    <section class="hero">
-      <h2><span id="nameSpan">Koya Market</span> – Your Trusted Destination for Real Estate and Online Shopping</h2>
-      <p>At Koya Market, we’re more than just real estate brokers — we are a dynamic platform connecting you with exceptional opportunities in property deals, rentals, and affiliate marketing ventures.</p>
-      <a href="products.html" class="btn">Shop Now</a>
-    </section>
+  
+<main class="main_home">
+  <main class="home">
+      <section class="hero">
+        <h2>Introducing <span id="nameSpan">Koya Market Ltd.&trade;</span> – Trust Us, We Are Here For You!</h2>
+        <p>At Koya Market&trade;, we’re more than just real estate brokers — we are a dynamic platform connecting you with exceptional opportunities in property deals, rentals, and HomeMade Lehyam and Organcic ingredients with Health Benifits.
+          Whether you’re looking to buy your dream home, rent a commercial space, or Lehyam with Health Benefits Worth Crores, Koya Market is your gateway to seamless transactions, expert guidance, and unmatched value.</p>
+        <a href="market.html" class="btn">Visit Now</a>
+      </section>
   </main>
+</main>
+  
 
-  <footer>
-    <p>&copy; 2023 Koya Market Ltd. All rights reserved.</p>
-    <a href="/privacyPolicy.html">Privacy Policy</a>
-    <a href="/termsConditions.html">Terms & Conditions</a>
-  </footer>
+<footer>
+      <p>&copy; 2024 Koya Market Ltd.&trade; All rights reserved.</p>
+      <a href="/privacyPolicy.html">Privacy Policy</a>
+      <a href="/termsConditions.html">Terms & Conditions</a>
+    <div class="social-icons">
+      <a href="https://www.instagram.com/koyamarket.inc?igsh=MWJjZWpkeXZxdHhtaA==" target="_blank" class="fa-brands fa-instagram"></a>
+      <a href="https://www.facebook.com/profile.php?id=61573447214593&mibextid=ZbWKwL" target="_blank" class="fa-brands fa-facebook"></a>
+      <a href="https://youtube.com/@koyacorporations?si=mXn6XuGtgQC9XuVX" target="_blank" class="fa-brands fa-youtube"></a>
+    </div>
+</footer>
+
 </body>
-</html>
+<script src="script.js"></script>
+</html> 
