@@ -1,129 +1,56 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="google-adsense-account" content="ca-pub-7248909901059325">
-  <title>Booking - Koya Market</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <link rel="icon" type="image/png" href="/assets/Fevicon - Koya Market.png">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+// ✅ Firebase Configuration (Same as Contact Page)
+const firebaseConfig = {
+    apiKey: "AIzaSyCytfUalkyFrowHedfmSAtEEJTAJZAsFe4",
+    authDomain: "users-messages-koyamarket.firebaseapp.com",
+    projectId: "users-messages-koyamarket",
+    storageBucket: "users-messages-koyamarket.appspot.com",
+    messagingSenderId: "524030311376",
+    appId: "1:524030311376:web:16b0969316fdc5577397d5",
+    measurementId: "G-3EPBVVXBB0"
+};
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+const db = firebase.firestore();
 
-    <!-- ✅ Firebase Core -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app-compat.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore-compat.js"></script>
+// ✅ Get Product ID from URL
+const urlParams = new URLSearchParams(window.location.search);
+const productName = urlParams.get("id");
 
-    <!-- ✅ Purchase Form Script -->
-    <script src="booking.js" defer></script>
-    <style>
-        .booking_main{
-            background-color: white;
-            padding: 40px 0 20px 0;
-        }
-        main{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 70vh;
-            margin-bottom: 30px;
-        }
-        h2 {
-            text-align: center;
-            color: #333;
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            margin-top: 10px;
-        }
+// ✅ Ensure Product Data is Available
+if (!productName) {
+    alert("Invalid product selection!");
+    window.location.href = "index.html"; // Redirect if ID is invalid
+}
 
-        #purchase-form {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            width: 110%;
-            max-width: 400px;
-            text-align: left;
-        }
+// ✅ Handle Form Submission
+document.getElementById("purchase-form").addEventListener("submit", async function (e) {
+    e.preventDefault(); // Prevent form reload
 
-        label {
-            display: block;
-            font-weight: bold;
-            margin-top: 10px;
-        }
+    // ✅ Get Form Data
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const gmail = document.getElementById("gmail").value.trim();
 
-        input {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
+    if (!name || !phone || !gmail) {
+        alert("⚠️ Please fill in all the fields.");
+        return;
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            background-color: black;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-            margin-top: 15px;
-        }
+    // ✅ Store Order Data in Firestore (`bookings` Collection)
+    try {
+        await db.collection("bookings").add({
+            name,
+            phone,
+            gmail,
+            productName,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp()
+        });
 
-        button:hover {
-            background-color: white;
-            color: #222;
-        }
-
-    </style>
-</head>
-<body>
-  <header>
-    <h1>Booking</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li> 
-        <li><a href="about.html">About</a></li> 
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="market.html">market</a></li>
-      </ul>
-    </nav>
-  </header>
-<main class="booking_main"> 
-    <main>
-        <form id="purchase-form">
-            <h2>Complete Your Booking</h2>
-            <label for="name">Name:</label>
-            <input type="text" id="name" required>
-
-            <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" required>
-
-            <label for="gmail">Gmail ID:</label>
-            <input type="email" id="gmail" required>
-
-            <button type="submit">Submit</button>
-        </form>
-    </main>
-</main>   
-    <footer>
-            <p>&copy; 2024 My Ecommerce Store. All rights reserved.</p>
-            <a href="/privacyPolicy.html">Privacy Policy</a>
-            <a href="/termsConditions.html">Terms & Conditions</a>
-        <div class="social-icons">
-            <a href="https://www.instagram.com/koyamarket.inc?igsh=MWJjZWpkeXZxdHhtaA==" target="_blank" class="fa-brands fa-instagram"></a>
-            <a href="https://www.facebook.com/profile.php?id=61573447214593&mibextid=ZbWKwL" target="_blank" class="fa-brands fa-facebook"></a>
-            <a href="https://youtube.com/@koyacorporations?si=mXn6XuGtgQC9XuVX" target="_blank" class="fa-brands fa-youtube"></a>
-        </div>
-    </footer>
-</body>
-</html> 
+        alert("✅ Order submitted successfully!");
+        document.getElementById("purchase-form").reset(); // Clear form
+    } catch (error) {
+        console.error("🔥 Firestore Error:", error);
+        alert("❌ Order submission failed.");
+    }
+});
