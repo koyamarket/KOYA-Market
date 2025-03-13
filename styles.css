@@ -55,7 +55,7 @@ body {
     position: relative;
     width: 100%;
     height: 500px; /* Adjust height as needed */
-    background: url('/assets/Buildings\ -\ Koya\ Market.jpg') no-repeat center center/cover;
+    background: url('https://res.cloudinary.com/djpliybbm/image/upload/v1741407650/Buildings_-_Koya_Market_tui8su.jpg') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -99,7 +99,60 @@ body {
   }
 
   /* Products */
-  
+
+  .product-overview {
+    color: white;
+    padding: 10px;
+    text-align: left;
+    border: none;
+  }
+  .product-overview .container{
+    border: none;
+    box-shadow: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3%;
+    text-align: left;
+    max-width: 100%;
+    width: 100%;
+  }
+  .product-overview .container h1{
+    text-align: left;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: maximium;
+    color: transparent;
+    -webkit-text-stroke: 1.5px #222; /* Stroke effect */
+    word-spacing: 1px;
+  }
+  .product-overview .container p{
+    font-size: 16px;
+    font-weight: 300;
+    color: #222;
+  }
+  .product-overview .container .question{
+    font-size: 20px;
+    font-weight: 500;
+    color: #222;
+  }
+  /* product overview */
+
+  .futured-products ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  .futured-products ul a{
+    font-size: 14px;
+    font-weight: 300;
+  }
+  .fp-highlight{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  /* *** */
   .products_main{
     background: white;
     padding: 10px;
@@ -144,7 +197,7 @@ body {
     height:auto;
     border-radius: 10px;
   }
-
+  
 
   /* Footer Universal*/
 
@@ -190,7 +243,7 @@ body {
   background: white;
   padding: 10px;
 }
-.container {
+.contact .container {
   color: #222;
   width: 60%;
   margin: 50px auto;
@@ -321,6 +374,7 @@ button:hover {
 .about .container .highlight a{
     text-decoration: none;
     color: #008220;
+    font-size: 18px;
   }
 .about .container .highlight a:hover{
     text-decoration: underline;
@@ -368,6 +422,99 @@ button:hover {
   transition: ease-in-out 0.3s ;
 }
 
+/* Blog Pages */
+
+.blogMain{
+  background: white;
+  padding: 20px;
+  margin: 0 auto;
+  width: 100%;
+  overflow: scroll;
+}
+.blogMain h1{
+  color: transparent;
+  -webkit-text-stroke: 1.5px #222;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  letter-spacing: 0.5px;
+  line-height: 31px;
+}
+.blogMain h2 {
+  color: #222;
+  text-align: left;
+  margin: auto 0;
+  font-size: 24px;
+
+}
+.location span{
+  font-size: 16px;
+  font-weight: 400;
+}
+.blogMain h3{
+  text-align: left;
+  margin: 0;
+  font-size: 23px;
+  padding: 5px;
+}
+.location { 
+  padding: 20px; 
+  margin-bottom: 0; 
+  border-radius: 5px; 
+}
+
+.location p { 
+   
+  margin: 5px 0; 
+}
+
+/* third-party icons */
+
+.about-more{
+  display: inline-block;
+  align-items: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #008220;
+  text-decoration: none;
+  gap: 5px;
+  padding: 10px;
+  transition: color 0.3s ease-in-out;
+}
+.about-more i{
+  font-size: 20px;
+  margin-right: 5px;
+}
+.about-more:hover {
+  color: #32994b; 
+}
+
+/* Be a Seller */
+.seller_main{
+  background: white;
+  padding: 40px;
+  position: relative;
+  width: 100%;
+  height: 500px; /* Adjust height as needed */
+  background: url('https://res.cloudinary.com/djpliybbm/image/upload/v1741407476/Seller_-_Koya_Market_i6gllm.jpg') no-repeat center center/cover;
+  display: flex;
+  /* align-items: center; */
+}
+.seller_main .hero-text {
+  width: 50%;
+}
+.seller_main .hero-text h1{
+  font-size: 50px;
+  margin: 0;
+  letter-spacing: 0.5px;
+  line-height: 31px;
+}
+.seller_main .hero-text p{
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+  line-height: 31px;
+}
 /* Responsive Design */
 @media (max-width: 90%) {
     nav ul li {
@@ -460,6 +607,60 @@ button:hover {
   .booking_main{
     padding: 0;
   }
+  .blogMain .container{
+    width: 97%;
+  }
+  /* third-party icons */
+  .about-more{
+    font-size: 14px;
+    display: inline-flex;
+    margin: 0 auto;
+    padding: 1px;
+  }
+  .about-more i{
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+  }
+  .about-more i a{
+    margin: 0;
+    padding: 0;
+  } 
+  .futured-products ul{
+    justify-content:end;
+    overflow: scroll;
+    display: inline;
+  }
+  .futured-products ul a{
+    font-size: 10px;
+    width: 100%;
+    text-align: left;
+  }
+  .fp-highlight{
+    font-size: 11.5px;
+    width: 30%;
+    text-align: left;
+  }
+
+  /* Be A Seller  */
+
+  .seller_main{
+    padding: 10px;
+    height: 700px;
+
+  }
+  .seller_main .hero-text {
+    width: 50%;
+  }
+  .seller_main .hero-text h1{
+    font-size: 35px;
+    margin:  0 20px 20px 0 ;
+  }
+  .seller_main .hero-text p{
+    font-size: 15px;
+    margin-bottom: 25px;
+    line-height: 20px;
+  }
     footer {
       height: 8.6rem;
     }
@@ -491,4 +692,5 @@ button:hover {
       .product-card {
         width: 250px;
       }
+      
   } 
